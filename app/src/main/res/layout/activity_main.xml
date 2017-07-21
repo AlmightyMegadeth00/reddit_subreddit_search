@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.reddit.davekessler_androidcodechallenge.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/search_bar_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/search_results_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
