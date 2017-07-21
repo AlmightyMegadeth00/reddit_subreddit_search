@@ -25,30 +25,42 @@ public class ViewHolderUtil {
     public static RecyclerView.ViewHolder populateViewHolder(
             @NonNull SearchResultsViewHolder holder, int position, SearchResultPost post) {
         // load image
-        loadImageResource(holder, post.getThumbnail());
+        if (!TextUtils.isEmpty(post.getThumbnail())) {
+            loadImageResource(holder, post.getThumbnail());
+        }
 
         // load author
-        loadPostAuthor(holder, post.getAuthor());
+        if (!TextUtils.isEmpty(post.getAuthor())) {
+            loadPostAuthor(holder, post.getAuthor());
+        }
 
         // load title
-        loadPostTitle(holder, post.getTitle());
+        if (!TextUtils.isEmpty(post.getTitle())) {
+            loadPostTitle(holder, post.getTitle());
+        }
 
         // load comments
-        loadPostComment(holder, post.getNumComments());
+        if (post.getNumComments() != null) {
+            loadPostComment(holder, post.getNumComments());
+        }
 
         // load ups
-        loadPostUps(holder, post.getUps());
+        if (post.getUps() != null) {
+            loadPostUps(holder, post.getUps());
+        }
 
         // load downs
-        loadPostDowns(holder, post.getDowns());
+        if (post.getDowns() != null) {
+            loadPostDowns(holder, post.getDowns());
+        }
 
         return holder;
     }
 
     private static void loadImageResource(SearchResultsViewHolder holder, String image) {
-        if (TextUtils.isEmpty(image) || image.equals("self")) {
+        if (image.equals("self")) {
             // default listed in xml resource
-            Log.e(TAG, "image was empty or self");
+            Log.e(TAG, "image was \"self\"");
             return;
         }
 
