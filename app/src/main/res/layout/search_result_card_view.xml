@@ -84,7 +84,7 @@
                     android:paddingBottom="5dp"
                     android:maxLines="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    android:background="#EEEEEE"
+                    android:background="@color/search_box_grey"
                     android:textSize="12sp"
                     android:text="@string/search_results_comments"/>
 
@@ -106,7 +106,7 @@
                     android:paddingBottom="5dp"
                     android:maxLines="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    android:background="#EEEEEE"
+                    android:background="@color/search_box_grey"
                     android:textSize="12sp"
                     android:text="@string/search_results_ups"/>
 
