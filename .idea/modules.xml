@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DaveKessler_AndroidCodeChallenge.iml" filepath="$PROJECT_DIR$/DaveKessler_AndroidCodeChallenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reddit_subreddit_search.iml" filepath="$PROJECT_DIR$/reddit_subreddit_search.iml" />
     </modules>
   </component>
 </project>

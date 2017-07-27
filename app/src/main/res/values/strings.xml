@@ -6,4 +6,6 @@
     <string name="search_results_comments">%1$d Comments</string>
     <string name="search_results_ups">%1$d Ups</string>
     <string name="search_results_downs">%1$d Downs</string>
+    <string name="search_default_title">Author</string>
+    <string name="search_default_summary">Post summary</string>
 </resources>
