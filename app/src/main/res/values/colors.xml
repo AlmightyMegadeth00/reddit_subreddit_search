@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="search_box_grey">#E0E0E0</color>
+    <color name="black">#000000</color>
+    <color name="accent_blue">#4FC3F7</color>
+    <color name="accent_blue_pressed">#47afde</color>
+    <color name="accent_blue_gradient">#3f9dc7</color>
+    <color name="accent_blue_pressed_gradient">#388db3</color>
 </resources>

@@ -23,7 +23,7 @@
             android:layout_margin="8dp"
             android:src="@drawable/reddit_alien"
             app:civ_border_width="4dp"
-            app:civ_border_color="@android:color/holo_blue_bright"/>
+            app:civ_border_color="@color/accent_blue"/>
 
         <LinearLayout
             android:id="@+id/search_result_text_body_layout"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@android:color/holo_blue_bright"
+                android:textColor="@color/accent_blue"
                 android:textSize="24sp"
                 android:text="@string/search_default_title"
                 android:textStyle="bold"/>
@@ -128,7 +128,7 @@
                     android:paddingBottom="5dp"
                     android:maxLines="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    android:background="#EEEEEE"
+                    android:background="@color/search_box_grey"
                     android:textSize="12sp"
                     android:text="@string/search_results_downs"/>
 
