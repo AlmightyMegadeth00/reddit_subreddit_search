@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 25
@@ -51,6 +52,11 @@ dependencies {
     compile 'io.reactivex.rxjava2:rxjava:2.1.1'                                  // updated 7/20/17
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'                               // updated 7/20/17
     compile 'de.hdodenhof:circleimageview:2.1.0'                                 // updated 7/20/17
-    compile 'com.github.bumptech.glide:glide:3.8.0'                              // updated 7/20/17 (not latest)
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    // updated 7/20/17 (not latest)
 
+}
+repositories {
+    mavenCentral()
 }
