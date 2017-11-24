@@ -61,7 +61,7 @@ public class SearchControlBarFragment extends BaseFragment {
             }
         });
 
-        return null;
+        return onCreateView;
     }
 
     private void handleSearch() {

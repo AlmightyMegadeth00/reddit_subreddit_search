@@ -16,8 +16,7 @@
         android:gravity="center"
         android:background="?attr/colorPrimary"
         android:orientation="horizontal"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:visibility="gone">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <LinearLayout
             android:id="@+id/search_box_layout"
