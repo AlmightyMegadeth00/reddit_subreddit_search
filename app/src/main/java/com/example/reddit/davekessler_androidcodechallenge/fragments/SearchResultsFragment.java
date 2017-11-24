@@ -98,4 +98,10 @@ public class SearchResultsFragment extends BaseFragment {
             }
         }
     };
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().unregisterReceiver(mReceiver);
+    }
 }
