@@ -1,8 +1,10 @@
 package com.example.reddit.davekessler_androidcodechallenge.dagger2.components;
 
+import com.example.reddit.davekessler_androidcodechallenge.BaseActivity;
 import com.example.reddit.davekessler_androidcodechallenge.MainActivity;
 import com.example.reddit.davekessler_androidcodechallenge.dagger2.UserScope;
 import com.example.reddit.davekessler_androidcodechallenge.dagger2.modules.RedditModule;
+import com.example.reddit.davekessler_androidcodechallenge.fragments.BaseFragment;
 import com.example.reddit.davekessler_androidcodechallenge.fragments.SearchControlBarFragment;
 import com.example.reddit.davekessler_androidcodechallenge.fragments.SearchResultsFragment;
 
@@ -14,4 +16,5 @@ public interface RedditComponent {
     void inject(MainActivity activity);
     void inject(SearchControlBarFragment fragment);
     void inject(SearchResultsFragment fragment);
+    void inject(BaseFragment fragment);
 }
