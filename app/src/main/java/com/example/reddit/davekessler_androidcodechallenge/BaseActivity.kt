@@ -9,7 +9,8 @@ import android.widget.EditText
 
 class BaseActivity : FragmentActivity()
 {
-    override fun dispatchTouchEvent(event: MotionEvent): Boolean
+    override
+    fun dispatchTouchEvent(event: MotionEvent): Boolean
     {
         if (event.action == MotionEvent.ACTION_DOWN)
         {
