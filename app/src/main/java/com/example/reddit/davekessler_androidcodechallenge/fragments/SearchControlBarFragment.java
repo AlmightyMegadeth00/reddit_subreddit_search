@@ -27,25 +27,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SearchControlBarFragment extends Fragment {
+public class SearchControlBarFragment extends BaseFragment {
 
     private static final String TAG = SearchControlBarFragment.class.getSimpleName();
 
     @BindView(R.id.search_edit_text)
     EditText mSearchEditText;
 
-    @Inject
-    RestClient mRestClient;
-
     public SearchControlBarFragment() {
         // fragment to contain the search bar
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        ((MainApplication) getActivity().getApplication()).getRedditComponent().inject(this);
     }
 
     @Override
@@ -71,7 +61,7 @@ public class SearchControlBarFragment extends Fragment {
             }
         });
 
-        return onCreateView;
+        return null;
     }
 
     private void handleSearch() {

@@ -31,7 +31,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SearchResultsFragment extends Fragment {
+public class SearchResultsFragment extends BaseFragment {
 
     private static final String TAG = SearchResultsFragment.class.getSimpleName();
 
@@ -40,9 +40,6 @@ public class SearchResultsFragment extends Fragment {
 
     @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout mSwipeRefreshLayout;
-
-    @Inject
-    RestClient mRestClient;
 
     public SearchResultsFragment() {
         // fragment containing recyclerview for search results
@@ -77,9 +74,6 @@ public class SearchResultsFragment extends Fragment {
     public void onCreate(Bundle onSavedInstanceState) {
         super.onCreate(onSavedInstanceState);
 
-        ((MainApplication) getActivity().getApplication()).getRedditComponent().inject(this);
-
-        // TODO: replace with rxjava
         IntentFilter filter = new IntentFilter();
         filter.addAction(Constants.SEARCH_RESULTS_UPDATED);
         getActivity().registerReceiver(mReceiver, filter);
@@ -104,10 +98,4 @@ public class SearchResultsFragment extends Fragment {
             }
         }
     };
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        getActivity().unregisterReceiver(mReceiver);
-    }
 }

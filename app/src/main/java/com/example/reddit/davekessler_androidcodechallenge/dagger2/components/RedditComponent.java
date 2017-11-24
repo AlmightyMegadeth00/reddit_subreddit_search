@@ -13,8 +13,6 @@ import dagger.Component;
 @UserScope
 @Component(dependencies = NetworkComponent.class, modules = RedditModule.class)
 public interface RedditComponent {
-    void inject(MainActivity activity);
-    void inject(SearchControlBarFragment fragment);
-    void inject(SearchResultsFragment fragment);
+    void inject(BaseActivity activity);
     void inject(BaseFragment fragment);
 }
