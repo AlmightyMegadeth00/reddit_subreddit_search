@@ -15,16 +15,17 @@ public class MainActivity extends BaseActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    @Inject
-    RestClient mRestClient;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((MainApplication) getApplication()).getRedditComponent().inject(this);
+        mRestClient.requestSearchResults(Constants.DEFAULT_SEARCH);
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
         SearchControlBarFragment searchControlBarFragment = new SearchControlBarFragment();
         SearchResultsFragment searchResultsFragment = new SearchResultsFragment();
 
@@ -34,7 +35,5 @@ public class MainActivity extends BaseActivity {
         transaction.add(R.id.search_bar_frame_layout, searchControlBarFragment, SearchControlBarFragment.class.getSimpleName());
         transaction.add(R.id.search_results_frame_layout, searchResultsFragment, SearchResultsFragment.class.getSimpleName());
         transaction.commit();
-
-        mRestClient.requestSearchResults(Constants.DEFAULT_SEARCH);
     }
 }

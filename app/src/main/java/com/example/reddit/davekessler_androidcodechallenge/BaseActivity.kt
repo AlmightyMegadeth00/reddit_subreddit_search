@@ -10,7 +10,8 @@ import com.example.reddit.davekessler_androidcodechallenge.dagger2.RestClient
 import javax.inject.Inject
 
 open class BaseActivity : FragmentActivity() {
-
+    @Inject
+    internal var mRestClient: RestClient? = null
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         if (event.action == MotionEvent.ACTION_DOWN) {

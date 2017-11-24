@@ -15,6 +15,4 @@ import dagger.Component;
 public interface RedditComponent {
     void inject(MainActivity activity);
     void inject(SearchControlBarFragment fragment);
-    void inject(SearchResultsFragment fragment);
-    void inject(BaseFragment fragment);
 }

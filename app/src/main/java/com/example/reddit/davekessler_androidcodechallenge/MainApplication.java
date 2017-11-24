@@ -28,7 +28,6 @@ public class MainApplication extends Application {
                 .build();
 
         mRedditComponent = DaggerRedditComponent.builder()
-                .networkComponent(mNetworkComponent)
                 .redditModule(new RedditModule(getApplicationContext()))
                 .build();
     }

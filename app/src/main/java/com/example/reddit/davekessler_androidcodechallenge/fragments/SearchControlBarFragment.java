@@ -27,7 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SearchControlBarFragment extends Fragment {
+public class SearchControlBarFragment extends BaseFragment {
 
     private static final String TAG = SearchControlBarFragment.class.getSimpleName();
 
