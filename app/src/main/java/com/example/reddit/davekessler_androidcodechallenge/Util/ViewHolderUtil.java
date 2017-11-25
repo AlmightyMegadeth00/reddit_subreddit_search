@@ -58,6 +58,12 @@ public class ViewHolderUtil {
     }
 
     private static void loadImageResource(SearchResultsViewHolder holder, String image) {
+        if (image.equals("self")) {
+            // default listed in xml resource
+            Log.e(TAG, "image was \"self\"");
+            return;
+        }
+
         // TODO: Placeholder was not available with circle transform.  Need to evaluate Glide 4.0.0 release candidates
         // for stability and compatibility with circle cropped images.. otherwise evaluate picasso.
         Glide.with(holder.postImage.getContext())
