@@ -86,7 +86,6 @@ public class SearchResultsFragment extends BaseFragment {
 
             onItemsLoadComplete();
 
-            // this shouldn't be necessary but ¯\_(ツ)_/¯
             if (!results.isEmpty()) {
                 RecyclerView.Adapter searchResultsAdapter = new SearchResultsAdapter(results, mSearchResultsRecyclerView);
                 RecyclerView.LayoutManager mSearchResultsLayoutManager = new LinearLayoutManager(context);

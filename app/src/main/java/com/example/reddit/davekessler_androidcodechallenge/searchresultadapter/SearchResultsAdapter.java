@@ -35,7 +35,7 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsView
     @Override
     public SearchResultsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_result_card_view, null);
-        view.setOnClickListener(new RecyclerItemOnClickListener());
+        view.setOnClickListener(new RecyclerItemOnClickListener(searchResults));
         return new SearchResultsViewHolder(view);
     }
 
@@ -53,8 +53,14 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsView
 
     private class RecyclerItemOnClickListener implements View.OnClickListener {
 
-        private final String SUBJECT = "zOMG a Reddit link";
+        private final String SUBJECT = "zOMG a Reddit link by";
         private final String BODY = "yo dawg. I heard you like reddit links.  Check this out: ";
+
+        private List<SearchResultPost> searchResults;
+
+        RecyclerItemOnClickListener(List<SearchResultPost> searchResults) {
+            this.searchResults = searchResults;
+        }
 
         @Override
         public void onClick(View v) {
@@ -63,7 +69,7 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsView
 
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_SUBJECT, SUBJECT);
+            intent.putExtra(Intent.EXTRA_SUBJECT, SUBJECT + " " + searchResults.get(itemPosition).getAuthor());
             intent.putExtra(Intent.EXTRA_TEXT, BODY +  getPostLink(itemPosition));
 
             v.getContext().startActivity(Intent.createChooser(intent, "Share Link:"));
